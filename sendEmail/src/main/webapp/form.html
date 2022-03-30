@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="outerDiv">
+        <form method="post" action="Servlet">
+            <h1>Form</h1>
+            <section id="recSection">
+                <label for="recipient">recipient: </label>
+                <input type="text" name="recipient" id="recipient">
+            </section>
+            <section id="subjSection">
+                <label for="subject">subject: </label>
+                <input type="text" name="subject" id="subject">
+            </section>
+            <section id="textSection">
+                <label for="textarea">message: </label>
+                <textarea name="textarea" id="textarea" rows="5" cols="21"></textarea>
+            </section>
+            <section id="btnsSection">
+                <input type="reset" value="clear">
+                <input type="submit" value="submit" id="submitBtn">
+            </section>
+        </form>
+    </div>
+</body>
+</html>

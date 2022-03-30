@@ -1,0 +1,94 @@
+:root {
+    --formBorder: linear-gradient(0deg, rgb(194, 51, 51), rgb(35, 198, 209));
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+@keyframes move-border1{
+    from { background-position: left}
+    to { background-position: right}
+    from { background-position: right}
+    to { background-position: left}
+}
+
+@keyframes move-border2{
+    from { background-position: right}
+    to { background-position: left}
+}
+
+#outerDiv{
+    margin-top: 10rem;
+    background:linear-gradient(45deg, rgb(194, 51, 51) 50%, rgb(35, 198, 209)50%);
+    padding: 10px;
+    width: fit-content;
+    animation: move-border1 10s infinite  alternate ;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation-delay: -2s;
+  
+    background-position: left;   
+    background-size: 300%;
+}
+
+
+
+form {
+    
+    width: fit-content;
+    min-width: 50ch;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid black;
+    background-color: white;
+    text-align: center;
+}
+
+form > * {
+    width: 30ch;
+}
+
+section{
+    display: flex;
+}
+
+#recSection{
+
+}
+
+#subjSection{
+    column-gap: 10px;
+}
+
+#textSection{
+    column-gap: 1px;
+}
+#btnsSection{
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    margin: 10px;
+}
+#btnsSection>* {
+    width: 70px;
+    padding: 5px;
+}
+
+#submitBtn{
+    background: linear-gradient(1deg, white 50%, rgb(18, 150, 51) 50%);
+    background-size: 3000%;
+    background-position: left;
+    transition: background-position 0.5s;
+    
+}
+
+#submitBtn:hover {
+    background-position: right;
+    cursor: pointer;
+}
+
+
