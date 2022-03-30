@@ -1,5 +1,5 @@
 :root {
-    --formBorder: linear-gradient(0deg, rgb(194, 51, 51), rgb(35, 198, 209));
+    --formBorder: linear-gradient(45deg, rgb(194, 51, 51) 50%, rgb(35, 198, 209)50%);
 }
 
 body {
@@ -8,32 +8,22 @@ body {
     overflow-x: hidden;
 }
 
-@keyframes move-border1{
+@keyframes move-border{
     from { background-position: left}
     to { background-position: right}
     from { background-position: right}
     to { background-position: left}
 }
 
-@keyframes move-border2{
-    from { background-position: right}
-    to { background-position: left}
-}
-
 #outerDiv{
     margin-top: 10rem;
-    background:linear-gradient(45deg, rgb(194, 51, 51) 50%, rgb(35, 198, 209)50%);
+    background: var(--formBorder);
     padding: 10px;
     width: fit-content;
-    animation: move-border1 10s infinite  alternate ;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
-    animation-delay: -2s;
-  
+    animation: move-border 10s infinite  alternate ;  
     background-position: left;   
     background-size: 300%;
 }
-
-
 
 form {
     
@@ -54,10 +44,6 @@ form > * {
 
 section{
     display: flex;
-}
-
-#recSection{
-
 }
 
 #subjSection{
@@ -90,5 +76,3 @@ section{
     background-position: right;
     cursor: pointer;
 }
-
-
